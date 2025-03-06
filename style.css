@@ -1,8 +1,7 @@
-
 :root {
-    --text-color: #1a1c20;
-    --link-color: #4a76ee;
-    --background-color: #eeeff1;
+    --text-color: #eeeff1; /* Inverted to light color */
+    --link-color: #4a76ee; /* You can adjust this if needed */
+    --background-color: #1a1c20; /* Inverted to dark color */
   }
   
   * {
@@ -50,8 +49,8 @@
   }
   
   nav .right a:last-child {
-    color: var(--background-color);
-    background-color: var(--text-color);
+    color: var(--background-color); /* Inverted */
+    background-color: var(--text-color); /* Inverted */
     padding: 5px 15px;
     border-radius: 5px;
   }
@@ -107,6 +106,7 @@
   .hero-section .headshot img {
     width: 350px;
     border-radius: 50%;
+    
   }
   
   /* SECTION 2: Skills */
@@ -140,7 +140,7 @@
     width: 200px;
     padding: 10px 20px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid #555;
     border-radius: 5px;
   }
   
@@ -155,29 +155,29 @@
     font-size: 18px;
   }
   
-  /* SECTION 3: Testimony */
-  .testimony-section {
+    /* SECTION 3: Projects */
+  .projects-section {
     padding: 0 50px;
     margin-bottom: 100px;
   }
   
-  .testimony-section h2 {
+  .projects-section h2 {
     font-size: 35px;
     margin-bottom: 30px;
   }
   
-  .testimony-section .group {
+  .projects-section .group {
     display: flex;
     align-items: center;
     gap: 50px;
   }
   
-  .testimony-section .group .person-details {
+  .projects-section .group .person-details {
     text-align: center;
     flex: 2;
   }
   
-  .testimony-section .group .person-details img {
+  .projects-section .group .person-details img {
     width: 200px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -185,15 +185,15 @@
     margin-bottom: 10px;
   }
   
-  .testimony-section .group .person-details p {
+  .projects-section .group .person-details p {
     font-weight: 600;
   }
   
-  .testimony-section .group .person-details p:last-child {
+  .projects-section .group .person-details p:last-child {
     font-weight: normal;
   }
   
-  .testimony-section .group .text {
+  .projects-section .group .text {
     flex: 8;
   }
   
@@ -244,6 +244,83 @@
     cursor: pointer;
     transition: .1s;
   }
+
+  .work-experience {
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
+  
+  .work-experience  h2 {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .work-experience {
+	.jobs {
+		display:flex;
+		gap:30px;
+		@media(max-width:1024px){
+			flex-direction:column;
+		}
+		article {
+			background-color: var(--yellow-100);
+			padding:30px;
+			border-radius:30px;
+			flex:1;
+			h3 {
+				margin-top:20px;
+				margin-bottom:10px;
+			}
+			div {
+				font-weight:600;
+				margin-bottom:5px;
+				color: var(--base-800);
+			}
+			p {
+				margin-bottom:10px;
+			}
+			figure {
+				width:100%;
+				padding-top:56.25%;
+				overflow:hidden;
+				position:relative;
+				border-radius:15px;
+				img {
+					position:absolute;
+					top:0;
+					left:0;
+					height:100%;
+					object-fit:cover;
+					transition: ease 3s all;
+				}
+				figcaption {
+					position:absolute;
+					bottom:0;
+					left:0;
+					right:0;
+					background-color: rgba(0,0,0,0.5);
+					color: var(--base-100);
+					text-align:center;
+					padding:10px;
+					opacity:0;
+					visibility:hidden;
+					transition: ease 0.3s all;
+				}
+
+				&:hover {
+					figcaption {
+						opacity:1;
+						visibility:visible;
+					}
+					img {
+						transform: scale(1.2);
+					}
+				}
+
+			}
+		}
+	}
+}
   
   .contact-section .group form button:hover {
     filter: brightness(.9);
@@ -266,12 +343,12 @@
       width: 300px;
     }
   
-    /* SECTION 3: Testimony */
-    .testimony-section {
+    /* SECTION 3: projects */
+    .projects-section {
       text-align: center;
     }
   
-    .testimony-section .group {
+    .projects-section .group {
       flex-direction: column;
     }
   
@@ -319,8 +396,8 @@
       font-size: 16px;
     }
   
-    /* SECTION 3: Testimony */
-    .testimony-section {
+    /* SECTION 3: projects */
+    .projects-section {
       padding: 0 20px;
     }
   
